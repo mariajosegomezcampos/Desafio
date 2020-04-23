@@ -1,0 +1,14 @@
+
+/* 
+html, body{
+    height: 100%;
+} */
+
+section{
+    height: 100vh;
+    background-color:#53bed8;
+}
+
+.btn{
+    justify-content: center;
+}
