@@ -1,6 +1,4 @@
 
-const cargarPosts = document.querySelector('#cargar').addEventListener('click',cargarApi);
-   
 function cargarApi(){
     //crear el objeto
     const  xhr= new XMLHttpRequest();
@@ -9,21 +7,28 @@ function cargarApi(){
     //cargar y leer datos
     xhr.onload=function(){
         if (this.status===200) { 
-        const respuesta = JSON.parse(this.responseText);
-   console.log(respuesta)
+        const data = JSON.parse(this.responseText);
         let contenido='';
-         Object.keys(respuesta).forEach(function(post){
-            
-            contenido += `<img src=" ${respuesta.picture.large}" width="100px"  alt="">
-                 <p>Nombre: ${post.title}</p>
-                  <p>Telefono:${post.cell}</p>
-                   <p>Email:${post.email}</p> 
-            `;
+        
+            data.results.map((e) => {
+             contenido += `
+             <div class="showCards">
+             <img class="img" src="${e.picture.large}"
+            <pclass="information">Nombre: ${e.name.title + " " + e.name.first + " " + e.name.last}</p>
+                  <p class="">Telefono:${e.cell}</p>
+                  <pclass="">Email:${e.email}</p> 
+                    </div> 
+             `;
         });
-        document.getElementById('cardsContainer').innerHTML= contenido
+
+        document.getElementById('contentCards').innerHTML= contenido
     }
 }
 //enviar la conexion 
 xhr.send();
+
+
 }
+
+cargarApi()
 

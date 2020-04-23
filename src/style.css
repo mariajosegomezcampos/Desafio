@@ -1,14 +1,52 @@
-
-/* 
-html, body{
-    height: 100%;
-} */
-
-section{
-    height: 100vh;
-    background-color:#53bed8;
+*¨{
+    margin:0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.btn{
-    justify-content: center;
+body {
+    background: #F0F8FF;
+    font-family: sans-serif;
 }
+
+.container {
+ 
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+
+}
+
+.showCards{
+    background: #53bed8;
+     width: 320px;
+     height: 95px;
+    justify-content: space-evenly;
+    color: rgb(245, 246, 247);
+    margin: 30px;
+    font-size: 14px;
+    font-weight: normal;
+    /* flex-direction: column; */
+     flex: 1 1 auto; 
+}
+
+.img{
+    float: left;
+    max-width: 25%;
+}
+
+.information{
+   
+ margin: 2% 10% 2% 10%; 
+    padding:10px;
+}
+
+
+
+
+
+
