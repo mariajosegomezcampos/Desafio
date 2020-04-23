@@ -12,12 +12,12 @@ function cargarApi(){
         const respuesta = JSON.parse(this.responseText);
    console.log(respuesta)
         let contenido='';
-         respuesta.forEach(function(respuesta){
+         Object.keys(respuesta).forEach(function(post){
             
             contenido += `<img src=" ${respuesta.picture.large}" width="100px"  alt="">
-                 <p>Nombre: ${respuesta.title}</p>
-                  <p>Telefono:${respuesta.cell}</p>
-                   <p>Email:${respuesta.email}</p> 
+                 <p>Nombre: ${post.title}</p>
+                  <p>Telefono:${post.cell}</p>
+                   <p>Email:${post.email}</p> 
             `;
         });
         document.getElementById('cardsContainer').innerHTML= contenido
