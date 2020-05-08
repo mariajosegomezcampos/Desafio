@@ -13,10 +13,12 @@ function cargarApi(){
             data.results.map((e) => {
              contenido += `
              <div class="showCards">
-             <img class="img" src="${e.picture.large}"
-            <pclass="information">Nombre: ${e.name.title + " " + e.name.first + " " + e.name.last}</p>
+             <div class="image"><img src="${e.picture.large}" alt=""></div>    
+             <div class="information">
+            <p>Nombre: ${e.name.title + " " + e.name.first + " " + e.name.last}</p>
                   <p class="">Telefono:${e.cell}</p>
-                  <pclass="">Email:${e.email}</p> 
+                  <p class="">Email:${e.email}</p> 
+                  </div> 
                     </div> 
              `;
         });
